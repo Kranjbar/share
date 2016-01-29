@@ -1,3 +1,3 @@
-== SkillsShare  (trading skills rather than currency)
+== Sharetastic  (trading skills rather than currency)
 
 A users can list skills on their profile that others can see in an organized fashion on our site. A second user can then sign in and email a selected user based on the desired skill to arrange a skill trade.
