@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'splash#index'
+  get '/about', to: 'splash#show', as: 'about'
 
   get 'users/index'
   get '/signup', to: 'users#new', as: 'new_user'
