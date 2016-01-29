@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   get 'users/edit'
 
+  get "/login", to: "sessions#new"
+
 end
