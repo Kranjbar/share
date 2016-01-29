@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
-	get '/', to: 'splash#index'
+  root to: 'splash#index'
+  get '/about', to: 'splash#show', as: 'about'
 
   get 'users/index'
-
-  get 'users/new'
-
+  get '/signup', to: 'users#new', as: 'new_user'
   get 'users/edit'
+  get '/users/:id', to: 'user#show', as: 'user'
 
-  get "/login", to: "sessions#new"
 
+  get '/login', to: 'sessions#new', as: 'new_session'
+  get '/logout', to: 'sessions#destroy', as: 'destroy_session' 
 end
