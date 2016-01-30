@@ -12,8 +12,13 @@ class UsersController < ApplicationController
 
   def create
 		@user = User.create(user_params)
-		login(@user)
-		redirect_to @user
+		if @user.save
+      login(@user)
+		  redirect_to @user
+    else
+      flash[:error] = "Email has already been taken"
+      redirect_to new_user_path
+    end
   end
 
   def show
