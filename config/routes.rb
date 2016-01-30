@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'categories/index'
+
+  get 'categories/show'
+
   root to: 'splash#index'
   get '/about', to: 'splash#show', as: 'about'
 
@@ -11,6 +15,10 @@ Rails.application.routes.draw do
   get "/users/:id/edit", to: "users#edit", as: "edit_user"
   patch "/users/:id", to: "users#update"
   delete "/users/:id", to: "users#destroy"
+
+  #Routes for categories
+  get "/categories", to: "category#index", as: "categories"
+  get "/categories/:id", to: "category#show", as: "category"
 
   
 
