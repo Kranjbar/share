@@ -12,10 +12,10 @@ Skill.destroy_all
 Category.destroy_all
 
   user = User.create([
-    { email: 'a@a.com', first_name: 'a', last_name: 'a', current_city: 'a', password_digest: 'a'},
-    { email: 'b@b.com', first_name: 'b', last_name: 'b', current_city: 'b', password_digest: 'b'},
-    { email: 'c@c.com', first_name: 'c', last_name: 'c', current_city: 'c', password_digest: 'c'},
-    { email: 'nwimmer123@yahoo.com', first_name: 'Noah', last_name: 'Wimmer', current_city: 'Berkeley', password_digest: '123'}
+    { email: 'a@a.com', first_name: 'a', last_name: 'a', current_city: 'a', password: 'a'},
+    { email: 'b@b.com', first_name: 'b', last_name: 'b', current_city: 'b', password: 'b'},
+    { email: 'c@c.com', first_name: 'c', last_name: 'c', current_city: 'c', password: 'c'},
+    { email: 'nwimmer123@yahoo.com', first_name: 'Noah', last_name: 'Wimmer', current_city: 'Berkeley', password: '123'}
   ])
 
   category = Category.create([{name: 'Tutoring'}, {name: 'Outdoors'}, {name: 'Health and Beauty'}])
