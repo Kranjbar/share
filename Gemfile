@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+#allows users to attach image files
+gem 'paperclip', '~> 4.3'
 gem 'ffaker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
