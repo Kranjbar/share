@@ -5,6 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+include ActionView::Helpers
+
+User.destroy_all
+Skill.destroy_all
+Category.destroy_all
 
   user = User.create([
     { email: 'a@a.com', first_name: 'a', last_name: 'a', current_city: 'a', password_digest: 'a'},
@@ -16,14 +21,14 @@
   category = Category.create([{name: 'Tutoring'}, {name: 'Outdoors'}, {name: 'Health and Beauty'}])
 
   skill = Skill.create([
-    {category_id: 1, name: 'Math'}, 
-    {category_id: 1, name: 'English'}, 
-    {category_id: 1, name: 'Science'},
-    {category_id: 2, name: 'Yard'},
-    {category_id: 2, name: 'Painting'},
-    {category_id: 2, name: 'Dog Walking'},
-    {category_id: 3, name: 'Hair Cutting'},
-    {category_id: 3, name: 'ManiPedi'},
-    {category_id: 3, name: 'Makeup'},
+    {category_id: Category.find_by_name('Tutoring').id, name: 'Math'}, 
+    {category_id: Category.find_by_name('Tutoring').id, name: 'English'}, 
+    {category_id: Category.find_by_name('Tutoring').id, name: 'Science'},
+    {category_id: Category.find_by_name('Outdoors').id, name: 'Yard'},
+    {category_id: Category.find_by_name('Outdoors').id, name: 'Painting'},
+    {category_id: Category.find_by_name('Outdoors').id, name: 'Dog Walking'},
+    {category_id: Category.find_by_name('Health and Beauty').id, name: 'Hair Cutting'},
+    {category_id: Category.find_by_name('Health and Beauty').id, name: 'ManiPedi'},
+    {category_id: Category.find_by_name('Health and Beauty').id, name: 'Makeup'},
   ])
 

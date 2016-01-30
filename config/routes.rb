@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'categories/index'
-
-  get 'categories/show'
-
   root to: 'splash#index'
   get '/about', to: 'splash#show', as: 'about'
 
@@ -17,8 +13,8 @@ Rails.application.routes.draw do
   delete "/users/:id", to: "users#destroy"
 
   #Routes for categories
-  get "/categories", to: "category#index", as: "categories"
-  get "/categories/:id", to: "category#show", as: "category"
+  get "/categories", to: "categories#index", as: "categories"
+  get "/categories/:id", to: "categories#show", as: "category"
 
   
 
