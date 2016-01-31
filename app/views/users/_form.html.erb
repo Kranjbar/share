@@ -1,7 +1,7 @@
 <%= form_for @user, :html => {:class => "form-horizontal center-block", :multipart => true} do |f| %>
   <% if current_user == @user %>
     <h1 class="form-group text-color title"><%= @user.first_name%>'s Info</h1>
-  <% else %>
+  <% else %><br>
     <h1 class="form-group text-color title">Signup</h1>
   <% end %>
   <div class="form-group">
@@ -24,11 +24,12 @@
     <%= f.label :password, "password", class: "control-label" %>
     <%= f.password_field :password, class: "form-control" %>
   </div>
-  <%= f.file_field :avatar %>
+  <div id="defaut-photo">
+    <%= image_tag @user.avatar.url %></div>
+    <%= f.file_field :avatar %><br>
   <div class="form-group">
     <%= f.submit "Submit", class: "btn btn-default btn-purple center-bl form-control" %> 
   </div> 
- 
-    
+   
  
 <% end %>
