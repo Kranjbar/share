@@ -37,7 +37,11 @@
 <% end %> 
 
 <% @user.skills.each do |skill| %>
-  <%= skill.name %><br>
+  <%= skill.name %>
+  <% skill.user_skills.each do |target| %>
+    <%= button_to "delete", user_skills_path(target.id), method: :delete, data: {confirm: "Are you sure you want to delete this skill?"}, class: "btn btn-primary" %>
+  <% end %>
+  <br>
 <% end %>
 </div>
 
