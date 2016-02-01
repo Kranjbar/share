@@ -1,4 +1,5 @@
 class UserSkillsController < ApplicationController
+  before_action :logged_in?, only: [ :index, :create]
 
   def index
     @categories = Category.all
