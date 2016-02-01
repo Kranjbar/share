@@ -12,8 +12,13 @@ class UsersController < ApplicationController
 
   def create
 		@user = User.create(user_params)
-		login(@user)
-		redirect_to @user
+		if @user.save
+      login(@user)
+		  redirect_to @user
+    else
+      flash[:error] = "Email has already been taken"
+      redirect_to new_user_path
+    end
   end
 
   def show
@@ -43,7 +48,7 @@ class UsersController < ApplicationController
     @user = User.find_by_id(params[:id])
     if current_user == @user
       @user.destroy
-      flash[:notice] = "Successfully deleted user #{@user.last_name}"
+      flash[:notice] = "Successfully deleted #{@user.first_name} #{@user.last_name}"
       redirect_to users_path
     else
       flash[:error] = @user.error.full_messages.join(", ")
