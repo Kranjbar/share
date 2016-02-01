@@ -1,4 +1,7 @@
 <h1><%= @category.name %></h1>
 <% @category.skills.each do |skill| %>
 	<h3><%= skill.name %><h3>
+  <% skill.users.each do |user| %>
+    <h4><%= user.first_name %> </h4>
+  <% end %>
 <% end %>
