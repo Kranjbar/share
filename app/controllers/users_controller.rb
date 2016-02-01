@@ -47,7 +47,6 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find_by_id(params[:id])
     if current_user == @user
-      
       @user.destroy
       flash[:notice] = "Successfully deleted #{@user.first_name} #{@user.last_name}"
       redirect_to users_path
