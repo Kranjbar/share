@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   #Routes for add skills
   get "/skills", to: "user_skills#index", as: "display_skills"
   post "/skills/:skill_id/users", to: "user_skills#create", as: "add_skills"
+  delete "/user_skills/:id", to: "user_skills#destroy", as: "user_skills"
 
   
 
