@@ -20,13 +20,25 @@
         </div>
       </div>
     <% end %> 
-  </div>
-</div>
+  
+
+<hr>
+<h2> Skills </h2>
+<br>
 
 <% if current_user == @user %>
   <div class="btn-group">
     <div class = "button text-center">
-      <%= link_to "add skill", class: 'btn btn-light center-block' %>
+      <%= link_to "add skill", display_skills_path, class: 'btn btn-light center-block' %>
     </div>
   </div>
 <% end %> 
+
+<% @user.skills.each do |skill| %>
+  <%= skill.name %>
+<% end %>
+</div>
+
+</div>
+
+
