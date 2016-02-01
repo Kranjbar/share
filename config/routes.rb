@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   get "/categories/:id", to: "categories#show", as: "category"
 
   #Routes for add skills
-  #get "/categories/:id/", to: "user_skills", as: "add_skill"
+  get "/skills", to: "user_skills#index", as: "display_skills"
+  post "/skills/:skill_id/users", to: "user_skills#create", as: "add_skills"
 
   
 
