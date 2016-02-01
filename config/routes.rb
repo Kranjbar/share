@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get "/categories", to: "categories#index", as: "categories"
   get "/categories/:id", to: "categories#show", as: "category"
 
+  #Routes for add skills
+  #get "/categories/:id/", to: "user_skills", as: "add_skill"
+
   
 
 #Routes for login form, logging in and logging out
