@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       login(@user)
 		  redirect_to @user
     else
-      flash[:error] = "Email has already been taken"
+      flash[:error] = "Please check your email: invalid format or already in use."
       redirect_to new_user_path
     end
   end
