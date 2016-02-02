@@ -8,10 +8,14 @@ class UserSkillsController < ApplicationController
   def create
     @user = current_user
     @skill = Skill.find(params[:skill_id])
-
-    @user.skills.push(@skill)
-
-    redirect_to "/users/#{@user.id}"
+    @user_skill = @user.user_skills.find_by(skill_id: @skill.id)
+    if !@user_skill
+      @user.skills.push(@skill)
+      redirect_to "/users/#{@user.id}"
+    else
+      flash[:error] = "You have already selected this skill"
+      redirect_to display_skills_path
+    end
   end
 
   def destroy
