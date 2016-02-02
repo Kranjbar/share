@@ -1,9 +1,17 @@
-<div style="padding: 5%">
-  <h2>Please Select a Skill to Add</h2>
-  <% @categories.each do |category| %>
-    <h4><%=link_to "#{category.name}", category_path(category.id) %><br></h4>
-    <% category.skills.each do |skill| %>
-			<%= button_to "#{skill.name}", add_skills_path(skill) %><br>
-		<% end %>
+<br>
+<br>
+
+<% @categories.each do |category| %>
+<div class="dropdown">
+  
+    <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <%= category.name %>
+    <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <% category.skills.each do |skill| %>
+        <%= button_to "#{skill.name}", add_skills_path(skill) %><br>
+      <% end %>
+    </ul>
   <% end %>
 </div>
