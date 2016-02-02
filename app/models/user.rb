@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
-	has_secure_password
+  extend FriendlyId
+  friendly_id :first_name, use: :history
+
+  has_secure_password
   has_many :user_skills, dependent: :destroy
   has_many :skills, through: :user_skills, dependent: :destroy
 
