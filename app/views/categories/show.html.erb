@@ -1,4 +1,9 @@
-<h1><%= @category.name %></h1>
-<% @category.skills.each do |skill| %>
-	<h3><%= skill.name %><h3>
-<% end %>
+<div style="padding: 5%" >
+  <h1><%= @category.name %></h1>
+  <% @category.skills.each do |skill| %>
+  	<h3><%= skill.name %><h3>
+    <% skill.users.each do |user| %>
+      <h4><strong> <%=link_to "#{user.first_name} #{user.last_name}", user_path(user.id) %> </strong><br>  </h4>
+    <% end %>
+  <% end %>
+</div>
