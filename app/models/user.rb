@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
       @user.try(:authenticate, params[:password])
   end
 
+  def is_authorized?
+    current_user == @user
+  end
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true
