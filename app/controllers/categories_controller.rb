@@ -4,6 +4,6 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find_by_id(params[:id])
+    @category = Category.friendly.find(params[:id])
   end
 end

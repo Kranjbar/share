@@ -22,15 +22,15 @@ class UsersController < ApplicationController
   end
 
   def show
-		@user = User.find_by_id(params[:id])
+		@user = User.friendly.find(params[:id])
   end
 
   def edit
-		@user = User.find_by_id(params[:id])
+		@user = User.friendly.find(params[:id])
   end
 
   def update
-    @user = User.find_by_id(params[:id])
+    @user = User.friendly.find(params[:id])
     if current_user == @user
       if @user.update_attributes(user_params)
         flash[:notice] = "Successfully updated user info"
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find_by_id(params[:id])
+    @user = User.friendly.find(params[:id])
     if current_user == @user
       @user.destroy
       flash[:notice] = "Successfully deleted #{@user.first_name} #{@user.last_name}"
