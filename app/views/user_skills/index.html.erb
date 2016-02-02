@@ -2,16 +2,16 @@
 <br>
 
 <% @categories.each do |category| %>
-<div class="dropdown">
-  
+  <div class="dropdown">
     <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <%= category.name %>
     <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
       <% category.skills.each do |skill| %>
-        <%= button_to "#{skill.name}", add_skills_path(skill) %><br>
+        <%= link_to "#{skill.name}", add_skills_path(skill), method: :post %><br>
       <% end %>
     </ul>
-  <% end %>
-</div>
+  </div>
+  <br>
+<% end %>
