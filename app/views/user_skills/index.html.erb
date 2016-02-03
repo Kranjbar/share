@@ -4,13 +4,13 @@
   <!-- Dropdown menu-->
   <% @categories.each do |category| %>
     <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <button class="btn btn-delete dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       <%= category.name %>
       <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
         <% category.skills.each do |skill| %>
-          <%= link_to "#{skill.name}", add_skills_path(skill), method: :post %><br>
+          <%= link_to "#{skill.name}", add_skills_path(skill), method: :post, class: 'accent-text' %><br>
         <% end %>
       </ul>
     </div>

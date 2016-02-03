@@ -17,17 +17,47 @@
  *= require splash
  */
 
+body {
+  background-color: #F7F1F5;
+}
+
+hr {
+  border-color: #222D51;
+}
+
+.context-text {
+  color: #A08F87;
+}
 
 .accent-text {
   color: #222D51;
 }
 
+.btn-accent {
+  background-color: #3D4324;
+  color: #F7F1F5;
+}
+
 .btn-delete {
-  background-color: #A08F87;
+  background-color: #222D51;
+  color: #F7F1F5;
 }
 
 .skill-btn {
   margin-bottom: 10px;
+}
+
+.btn-accent:hover, .btn-accent:focus, .btn-accent:active, .btn-accent.active, .open > .dropdown-toggle.btn-accent {
+  color: #A08F87;
+}
+
+.btn-delete:hover, .btn-delete:focus, .btn-delete:active, .btn-delete.active, .open > .dropdown-toggle.btn-delete {
+  color: #A08F87;
+}
+ 
+.btn-accent:active, .btn-accent.active {
+  background: #D4D4D4;
+  box-shadow: none;
 }
 
 .btn-prof {
