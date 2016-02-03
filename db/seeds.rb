@@ -12,11 +12,11 @@ Skill.destroy_all
 Category.destroy_all
 
   
-  k = User.new ({email: 'Kehontas@gmail.com', first_name: 'Kehontas', last_name: 'Rowe', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.' })  
+  k = User.new ({email: 'kehontas@gmail.com', first_name: 'Kehontas', last_name: 'Rowe', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.' })  
   k.avatar = File.open("public/images/Kehontas.png")
   k.save!
 
-  a = User.new ({email: 'Alexrao17@gmail.com', first_name: 'Alex', last_name: 'Roa', current_city: 'Palo Alto', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.' })
+  a = User.new ({email: 'alexrao17@gmail.com', first_name: 'Alex', last_name: 'Roa', current_city: 'Palo Alto', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.' })
   a.avatar = File.open("public/images/Alex.png")
   a.save!
 
@@ -24,7 +24,7 @@ Category.destroy_all
   n.avatar = File.open("public/images/Noah.png")
   n.save!
 
-  k = User.new ({email: 'Kayvon@gmail.com', first_name: 'Kayvon', last_name: 'Ranjbar', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'})
+  k = User.new ({email: 'kayvon@gmail.com', first_name: 'Kayvon', last_name: 'Ranjbar', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'})
   k.avatar = File.open("public/images/Kayvon.JPG")
   k.save!
 

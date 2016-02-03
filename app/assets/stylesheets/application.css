@@ -24,6 +24,10 @@ hr {
   border-color: #222D51;
 }
 
+h3, h4, p {
+  font-family: 'Raleway', sans-serif;
+}
+
 #bio {
   width: 50%;
   margin: 0 auto;
@@ -106,6 +110,7 @@ hr {
 
 #nav-title {
   color: #222D51;
+  opacity: 1;
 }
 
 .navbar {
