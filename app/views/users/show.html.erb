@@ -61,6 +61,10 @@
     <%= review.reviewer %>
   </p>
   <p>
+    <strong>Skill: </strong>
+    <%= review.rskill %>
+  </p>
+  <p>
     <strong>Review: </strong>
     <%= review.body %>
   </p>
@@ -75,7 +79,7 @@
     </p>
     <p>
       <%= f.label :rskill, "Skill being reviewed" %><br>
-      <%= f.text_field :reviewer %>
+      <%= f.text_field :rskill %>
     </p>
     <p>
      <%= f.label :body, "What do you think?" %><br>
