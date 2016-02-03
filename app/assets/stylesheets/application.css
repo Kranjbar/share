@@ -28,6 +28,11 @@ h3, h4, p {
   font-family: 'Raleway', sans-serif;
 }
 
+#skill-title {
+  font-size: 60px;
+  font-family: 'Lobster', cursive;
+}
+
 #bio {
   width: 50%;
   margin: 0 auto;
@@ -50,7 +55,7 @@ h3, h4, p {
 }
 
 .btn-accent {
-  background-color: #3D4324;
+  background-color: #222D51;
   color: #F7F1F5;
 }
 
@@ -59,8 +64,8 @@ h3, h4, p {
 }
 
 .btn-delete {
-  background-color: #222D51;
-  color: #F7F1F5;
+  background-color: #97B5E8;
+  color: #222D51;
 }
 
 .btn-delete:hover, .btn-delete:focus, .btn-delete:active, .btn-delete.active, .open > .dropdown-toggle.btn-delete {
@@ -68,7 +73,7 @@ h3, h4, p {
 }
 
 .skill-btn {
-  margin-bottom: 10px;
+  margin-bottom: 2%;
 }
 
 .btn-prof {
