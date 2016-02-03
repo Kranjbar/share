@@ -87,11 +87,15 @@
   <h4>Add a review:</h4>
   <%= form_for([@user, @user.reviews.build]) do |f| %>
     <p>
-      <%= f.label :reviewer %><br>
+      <%= f.label :reviewer, "Please Enter Your Name" %><br>
       <%= f.text_field :reviewer %>
     </p>
     <p>
-     <%= f.label :body %><br>
+      <%= f.label :rskill, "Skill being reviewed" %><br>
+      <%= f.text_field :reviewer %>
+    </p>
+    <p>
+     <%= f.label :body, "What do you think?" %><br>
      <%= f.text_area :body %>
     </p>
     <p>
