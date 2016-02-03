@@ -1,8 +1,11 @@
 <div style="padding: 5%">
-  <h2>Categories</h2>
-  <% @categories.each do |category| %>
-    <p>
-      <strong> <%=link_to "#{category.name}", category_path(category.slug) %> </strong><br>
-    </p>
-  <% end %>
+  <h2 class="title text-center">Categories</h2>
+  <br>
+  <div class="container">
+	  <% @categories.each do |category| %>
+			<div class="col-md-4 text-center">
+				<h3><%=link_to "#{category.name}", category_path(category.slug), class: "accent-text"%></h3>
+			</div>
+	  <% end %>
+	 </div>
 </div>
