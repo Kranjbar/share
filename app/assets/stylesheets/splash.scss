@@ -5,7 +5,31 @@
 
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 120px;
-  margin-top: 15%;
+  font-size: 160px;
+  margin-top: 18%;
   color: #222D51;
+  text-shadow: 2px 2px orange;
+}
+
+.splash {
+	background-image: url(http://bestwallpaperhd.com/wp-content/uploads/2012/12/download-sunrise-wallpaper.jpg);
+	height: auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+#descrip {
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+	text-shadow: 1px 1px #ffc04d;
+}
+
+#join-descrip {
+	font-family: 'Lobster', cursive;
+	text-shadow: .5px .5px #ffc04d;
 }

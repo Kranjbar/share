@@ -92,6 +92,10 @@ hr {
   height: 20px;
 }
 
+#nav-title {
+  color: #222D51;
+}
+
 .navbar {
   padding-top: 5px;
   padding-bottom: 5px;
