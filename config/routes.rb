@@ -22,7 +22,8 @@ Rails.application.routes.draw do
   delete "/user_skills/:id", to: "user_skills#destroy", as: "user_skills"
 
   #Routes for reviews
-  post "/users/:id/reviews", to: "reviews#create", as: "create_user" 
+  get "/users/:id/reviews", to: "reviews#index", as: "user_reviews"
+  post "/users/:id/reviews", to: "reviews#create", as: "create_review" 
   
 
   #Routes for login form, logging in and logging out
