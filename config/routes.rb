@@ -21,9 +21,11 @@ Rails.application.routes.draw do
   post "/skills/:skill_id/users", to: "user_skills#create", as: "add_skills"
   delete "/user_skills/:id", to: "user_skills#destroy", as: "user_skills"
 
+  #Routes for reviews
+  post "/users/:id/reviews", to: "reviews#create", as: "create_user" 
   
 
-#Routes for login form, logging in and logging out
+  #Routes for login form, logging in and logging out
   get "/login", to: "sessions#new", as: "new_session"
   post "/sessions", to: "sessions#create"
   get "/logout", to: "sessions#destroy", as: "destroy_session"
