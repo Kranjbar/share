@@ -13,7 +13,6 @@
  *= require bootstrap-3.3.6.min
  *= require_tree .
  *= require_self
- *= require show
  *= require splash
  */
 
@@ -23,6 +22,19 @@ body {
 
 hr {
   border-color: #222D51;
+}
+
+#bio {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.team-title {
+  margin: 25px;
+  padding-top: 1%;
+}
+
+.team-page {
 }
 
 .context-text {
@@ -90,6 +102,10 @@ hr {
 
 .navbar-brand-icon {
   height: 20px;
+}
+
+#nav-title {
+  color: #222D51;
 }
 
 .navbar {
