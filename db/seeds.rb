@@ -11,12 +11,22 @@ User.destroy_all
 Skill.destroy_all
 Category.destroy_all
 
-  user = User.create([
-    { email: 'Kehontas@gmail.com', first_name: 'Kehontas', last_name: 'Rowe', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'},
-    { email: 'Alexrao17@gmail.com', first_name: 'Alex', last_name: 'Roa', current_city: 'Palo Alto', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'},
-    { email: 'Kayvon@gmail.com', first_name: 'Kayvon', last_name: 'Ranjbar', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'},
-    { email: 'nwimmer123@yahoo.com', first_name: 'Noah', last_name: 'Wimmer', current_city: 'Berkeley', password: '123', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'}
-  ])
+  
+  k = User.new ({email: 'Kehontas@gmail.com', first_name: 'Kehontas', last_name: 'Rowe', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.' })  
+  k.avatar = File.open("public/images/Kehontas.png")
+  k.save!
+
+  a = User.new ({email: 'Alexrao17@gmail.com', first_name: 'Alex', last_name: 'Roa', current_city: 'Palo Alto', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.' })
+  a.avatar = File.open("public/images/Alex.png")
+  a.save!
+
+  n = User.new ({email: 'nwimmer123@yahoo.com', first_name: 'Noah', last_name: 'Wimmer', current_city: 'Berkeley', password: '123', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'})
+  n.avatar = File.open("public/images/Noah.png")
+  n.save!
+
+  k = User.new ({email: 'Kayvon@gmail.com', first_name: 'Kayvon', last_name: 'Ranjbar', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'})
+  k.avatar = File.open("public/images/Kayvon.JPG")
+  k.save!
 
   category = Category.create([{name: 'Tutoring'}, {name: 'Outdoors'}, {name: 'Health and Beauty'}, {name: 'Pets'}, 
     {name: 'In-Home Care'},{name: 'Lessons'}, {name: 'Fitness'},{name: 'Freelance Skills'}, {name: 'Home Improvement'}])
