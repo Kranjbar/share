@@ -21,6 +21,10 @@
     <%= f.text_field :current_city, :required => true, class: "form-control" %>
   </div>
   <div class="form-group">
+    <%= f.label :bio, "about me", class: "control-label" %>
+    <%= f.text_area :bio, :required => true, class: "form-control" %>
+  </div>
+  <div class="form-group">
     <%= f.label :password, "password", class: "control-label" %>
     <%= f.password_field :password, class: "form-control" %>
   </div>
