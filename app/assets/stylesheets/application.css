@@ -14,13 +14,10 @@
  *= require_tree .
  *= require_self
  *= require show
+ *= require splash
  */
 
-h1 {
-  font-family: 'Lobster', cursive;
-  font-size: 120px;
-  margin-top: 10%;
-}
+
 
 .form-horizontal {
   width: 300px;
