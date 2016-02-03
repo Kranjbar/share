@@ -1,11 +1,18 @@
 class User < ActiveRecord::Base
-	has_secure_password
+  extend FriendlyId
+  friendly_id :first_name, use: :history
+
+  has_secure_password
   has_many :user_skills, dependent: :destroy
   has_many :skills, through: :user_skills, dependent: :destroy
 
   def self.confirm(params)
       @user = User.find_by({email: params[:email]})
       @user.try(:authenticate, params[:password])
+  end
+
+  def is_authorized?
+    current_user == @user
   end
 
   validates :first_name, presence: true

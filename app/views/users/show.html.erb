@@ -11,6 +11,8 @@
         <p><%= mail_to @user.email, "Email me", subject: "Someone from Sharetastic wants to connect with you!" %></p>
       <% end %>
       <p><span class="context-text">current city - </span> <span class="accent-text"><%= @user.current_city %></span></p>
+      <p><span class="context-text">About me</span><br>
+      <div class= 'well well-sm' id="bio"><%= @user.bio %></div></p>
     </div>
     <% if current_user == @user %>
       <div class="btn-group">
