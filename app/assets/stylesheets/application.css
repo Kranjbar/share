@@ -17,6 +17,28 @@
  *= require splash
  */
 
+
+.accent-text {
+  color: #222D51;
+}
+
+.btn-delete {
+  background-color: #A08F87;
+}
+
+.skill-btn {
+  margin-bottom: 10px;
+}
+
+.btn-prof {
+  display: inline-block;
+}
+
+.title {
+  font-family: 'Lobster', cursive;
+  font-size: 80px;
+}
+
 .form-horizontal {
   width: 300px;
 }
