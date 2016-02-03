@@ -92,7 +92,6 @@ hr {
   height: 20px;
 }
 
-
 .navbar {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -101,6 +100,7 @@ hr {
 
 .navbar-right {
  padding-right: 30px;
+ float: right;
 }
 
 .navbar-header {
