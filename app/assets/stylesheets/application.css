@@ -28,6 +28,20 @@ h3, h4, p {
   font-family: 'Raleway', sans-serif;
 }
 
+.reviews {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.review-context {
+  padding-bottom: 10%;
+}
+
+
+#review-title {
+  padding-right: 2%;
+}
+
 #skill-title {
   font-size: 60px;
   font-family: 'Lobster', cursive;

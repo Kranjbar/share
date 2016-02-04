@@ -1,20 +1,22 @@
-<div style="padding: 5%">
+<div class="container text-center">
   <h2>Please Select a Skill to Add</h2>
-  
+ 
   <!-- Dropdown menu-->
-  <% @categories.each do |category| %>
-    <div class="dropdown">
-      <button class="btn btn-delete dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      <%= category.name %>
-      <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <% category.skills.each do |skill| %>
-          <%= link_to "#{skill.name}", add_skills_path(skill), method: :post, class: 'accent-text' %><br>
-        <% end %>
-      </ul>
-    </div>
-    <br>
-  <% end %>
+  <div class="container">
+    <% @categories.each do |category| %>
+      <div class="dropdown col-sm-4 text-center">
+        <button class="btn btn-accent dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <%= category.name %>
+        <span class="caret"></span>
+        </button>
 
+        <ul class="dropdown-menu">
+          <% category.skills.each do |skill| %>
+            <%= link_to "#{skill.name}", add_skills_path(skill), method: :post, class: 'accent-text' %><br>
+          <% end %>
+        </ul>
+      </div>
+      <br>
+    <% end %>
+  </div>
 </div>
