@@ -10,8 +10,8 @@
       <% if current_user && current_user != @user %>
         <h4><%= mail_to @user.email, "Email me", subject: "Someone from Sharetastic wants to connect with you!" %></h4>
       <% end %>
-      <h4><span class="context-text">Current City - </span> <span class="accent-text"><%= @user.current_city %></span></h4>
-      <h4><span class="context-text">About me</span></h4>
+      <h4><span class="context-text"></span>My Current City is <span class="accent-text"><%= @user.current_city %></span></h4>
+      <h4><span class="context-text">Some Things About Me</span></h4>
       <div class= 'accent-text' id="bio"><%= @user.bio %></div>
       <br>
     </div>
@@ -22,8 +22,10 @@
       	</div>
     <% end %> 
     <br>
-    <hr>
   </div>
+</div>
+
+  <hr class="container">
 
   <div class="col-md-12 container">
     <div id="skill-title" class="text-center" > Skills </div>
@@ -41,55 +43,61 @@
         <div class="col-sm-4 skill-btn text-center">
         	<h3 class="accent-text"><%= skill.name %></h3>
         	<% skill.user_skills.each do |target| %>
-          	<% if current_user == @user %>
-            	<% if target.user_id == @user.id %>
+          	<% if current_user == @user && target.user_id == @user.id %>
               	<%= button_to "Delete", user_skills_path(target.id), method: :delete, data: {confirm: "Are you sure you want to delete this skill?"}, class: "btn btn-delete" %>
-            	<% end %>
           	<% end %>
         	<% end %>
         </div>
       <% end %>
     </div>
   </div>
-</div>
+
 <br>
 
-<h3>Reviews<h3>
-<% @user.reviews.each do |review| %>
-  <p>
-    <strong>Reviewer: </strong>
-    <%= review.reviewer %>
-  </p>
-  <p>
-    <strong>Skill: </strong>
-    <%= review.rskill %>
-  </p>
-  <p>
-    <strong>Review: </strong>
-    <%= review.body %>
-  </p>
-<% end %>
+<hr class="container">
 
-<% if current_user && current_user != @user %>
-  <h4>Add a review:</h4>
-  <%= form_for([@user, @user.reviews.build]) do |f| %>
-    <p>
-      <%= f.label :reviewer, "Please Enter Your Name" %><br>
-      <%= f.text_field :reviewer %>
-    </p>
-    <p>
-      <%= f.label :rskill, "Skill being reviewed" %><br>
-      <%= f.text_field :rskill %>
-    </p>
-    <p>
-     <%= f.label :body, "What do you think?" %><br>
-     <%= f.text_area :body %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
+<div class="reviews">
+  <h2 class="">Reviews</h2>
+  <% @user.reviews.each do |review| %>
+    <h4>
+    <span class="review-context">
+      <span class="context-text">Reviewer: </span>
+      <%= review.reviewer %>
+    </span>
+    <br>
+    <span class="review-context">
+      <span class="context-text">Skill: </span>
+      <%= review.rskill %><br>
+    </span>
+    <span class="context-text">Review: </span>
+    <span class="review-context">
+      <%= review.body %><br>
+    </span>
+    </h4>
   <% end %>
-<% end %>
+</div>
+
+<hr class="container">
+
+<div class="review-form text-center">
+  <% if current_user && current_user != @user %>
+    <h3>Add a review:</h3>
+    <%= form_for([@user, @user.reviews.build]) do |f| %>
+        <%= f.hidden_field :reviewer, :value => current_user[:first_name] %><br>
+      <div class="context-text">
+        <%= f.label :rskill, "Skill being reviewed" %><br>
+        <%= f.text_field :rskill %>
+      </div>
+      <div class="context-text">
+       <%= f.label :body, "What do you think?" %><br>
+       <%= f.text_area :body, size: "40x8" %>
+      </div>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
 
 <br>
 <br>
