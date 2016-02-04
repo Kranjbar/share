@@ -17,7 +17,6 @@ Category.destroy_all
   k.save!
 
   a = User.new ({email: 'alexrao17@gmail.com', first_name: 'Alex', last_name: 'Rao', current_city: 'Palo Alto', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.' })
-
   a.avatar = File.open("public/images/Alex.png")
   a.save!
 
@@ -26,7 +25,6 @@ Category.destroy_all
   n.save!
 
   k = User.new ({email: 'kayvon.ranjbar@gmail.com', first_name: 'Kayvon', last_name: 'Ranjbar', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'})
-
   k.avatar = File.open("public/images/Kayvon.JPG")
   k.save!
 
