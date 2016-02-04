@@ -105,6 +105,7 @@ Sharetastic is designed to get new and old neighbors communicating in a friendly
 * User can create a list of skills they desire.
 * Numeric rating system for users.
 * In-app chat feature between users.
+* Improve the Accessibilty of the site
 
 # Contributors
 * <a href="https://github.com/kehontas" target="_blank">Kehontas Rowe</a>
