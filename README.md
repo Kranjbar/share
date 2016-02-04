@@ -21,7 +21,7 @@ Sharetastic is designed to get new and old neighbors communicating in a friendly
 5. Run `rails s` to start the server locally.
 
 # Screenshot
-<img src="ScreenShot.jpg">
+<img src="ScreenShot.png">
 
 # Wireframes
 <img src="Wireframes.jpg">
