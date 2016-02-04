@@ -17,19 +17,19 @@ Category.destroy_all
   k.save!
 
   a = User.new ({email: 'alexrao17@gmail.com', first_name: 'Alex', last_name: 'Rao', current_city: 'Palo Alto', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.' })
-  a.avatar = File.open("/images/Alex.png")
+  a.avatar = File.open("public/images/Alex.png")
   a.save!
 
   n = User.new ({email: 'nwimmer123@yahoo.com', first_name: 'Noah', last_name: 'Wimmer', current_city: 'Berkeley', password: '123', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'})
-  n.avatar = File.open("/images/Noah.png")
+  n.avatar = File.open("public/images/Noah.png")
   n.save!
 
   k = User.new ({email: 'kayvon.ranjbar@gmail.com', first_name: 'Kayvon', last_name: 'Ranjbar', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'})
-  k.avatar = File.open("/images/Kayvon.JPG")
+  k.avatar = File.open("public/images/Kayvon.JPG")
   k.save!
 
   h = User.new ({email: 'h.n.stenson@gmail.com', first_name: 'Heather', last_name: 'Stenson', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'})
-  h.avatar = File.open("/images/heather_w_chicken.jpg")
+  h.avatar = File.open("public/images/heather_w_chicken.jpg")
   h.save!
 
   category = Category.create([{name: 'Tutoring'}, {name: 'Outdoors'}, {name: 'Health and Beauty'}, {name: 'Pets'}, 
