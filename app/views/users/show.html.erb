@@ -25,8 +25,8 @@
     <hr>
   </div>
 
-  <div class="col-md-12 text-center">
-    <h2> Skills </h2>
+  <div class="col-md-12 container">
+    <div id="skill-title" class="text-center" > Skills </div>
     <br>
 
     <% if current_user == @user %>
@@ -36,14 +36,14 @@
       </div>
     <% end %> 
 
-    <div class="btn-group text-center">
+    <div class="btn-group text-center center-block">
       <% @user.skills.each do |skill| %>
-        <div class="col-sm-4 text-center skill-btn">
+        <div class="col-sm-4 skill-btn text-center">
         	<h3 class="accent-text"><%= skill.name %></h3>
         	<% skill.user_skills.each do |target| %>
           	<% if current_user == @user %>
             	<% if target.user_id == @user.id %>
-              	<%= button_to "Delete", user_skills_path(target.id), method: :delete, data: {confirm: "Are you sure you want to delete this skill?"}, class: "btn btn-delete btn-sm" %>
+              	<%= button_to "Delete", user_skills_path(target.id), method: :delete, data: {confirm: "Are you sure you want to delete this skill?"}, class: "btn btn-delete" %>
             	<% end %>
           	<% end %>
         	<% end %>
