@@ -19,7 +19,7 @@ A users can list skills on their profile that others can see in an organized fas
 5. Run `rails s` to start the server locally.
 
 # Wireframes
-# <img src="Wireframe.jpg">
+<img src="Wireframes.jpg">
 
 # User Stories
 
