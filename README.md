@@ -1,13 +1,13 @@
-# Sharetastic  (trading skills rather than currency)
+# Sharetastic
 A users can list skills on their profile that others can see in an organized fashion on our site. A second user can then sign in and email a selected user based on the desired skill to arrange a skill trade.
 
 ## Contents
-* **[Getting Started](#getting--started):** How can you work with our code?
+* **[Getting Started](#getting-started):** How can you work with our code?
 * **[Wireframes](#wireframes):** How did we envision the application's user interface?
-* **[User Stories](#user--stories):** How did we plan our features and organize them into sprints?
-* **[Heroku Link](#heroku--hosted--project)**
+* **[User Stories](#user-stories):** How did we plan our features and organize them into sprints?
+* **[Heroku Link](#heroku-hosted-project)**
 * **[Technologies](#technologies):** What languages, gems, libraries, and frameworks are being used?
-* **[Future Development](#future--development):** What are we hoping to add?
+* **[Future Development](#future-development):** What are we hoping to add?
 * **[Contributors](#contributors):** Who made all of this happen?
 
 # Getting Started
