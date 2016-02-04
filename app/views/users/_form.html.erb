@@ -1,38 +1,38 @@
 <%= form_for @user, :html => {:class => "form-horizontal center-block", :multipart => true} do |f| %>
   <% if current_user == @user %>
-    <h1 class="form-group text-color title"><%= @user.first_name%>'s Info</h1>
+    <h2 class="form-group accent-text title"><%= @user.first_name%>'s info</h2>
   <% else %><br>
-    <h1 class="form-group text-color title">Signup</h1>
+    <h2 class="form-group accent-text title">Signup</h2>
   <% end %>
   <div class="form-group">
-    <%= f.label :email, "email", class: " control-label" %>
-    <%= f.text_field :email, :required => true, class: "form-control" %>
+    <%= f.label :email, "email", class: "control-label" %>
+    <%= f.text_field :email, :required => true, class: "form-control accent-text" %>
   </div>
   <div class="form-group">
     <%= f.label :first_name, "first name", class: "control-label" %>
-    <%= f.text_field :first_name, :required => true, class: "form-control" %>
+    <%= f.text_field :first_name, :required => true, class: "form-control accent-text" %>
   </div>
   <div class="form-group">
     <%= f.label :last_name, "last name", class: "control-label" %>
-    <%= f.text_field :last_name, :required => true, class: "form-control" %>
+    <%= f.text_field :last_name, :required => true, class: "form-control accent-text" %>
   </div>
   <div class="form-group">
     <%= f.label :current_city, "current city", class: "control-label" %>
-    <%= f.text_field :current_city, :required => true, class: "form-control" %>
+    <%= f.text_field :current_city, :required => true, class: "form-control accent-text" %>
   </div>
   <div class="form-group">
     <%= f.label :bio, "about me", class: "control-label" %>
-    <%= f.text_area :bio, :required => true, class: "form-control" %>
+    <%= f.text_area :bio, :required => true, class: "form-control accent-text" %>
   </div>
   <div class="form-group">
     <%= f.label :password, "password", class: "control-label" %>
     <%= f.password_field :password, class: "form-control" %>
   </div>
-  <div id="defaut-photo">
+  <div class="text-center" id="defaut-photo">
     <%= image_tag @user.avatar.url %></div>
-    <%= f.file_field :avatar %><br>
+    <%= f.file_field :avatar, class: "text-center" %><br>
   <div class="form-group">
-    <%= f.submit "Submit", class: "btn btn-default btn-purple center-bl form-control" %> 
+    <%= f.submit "Submit", class: "btn btn-accent form-control" %> 
   </div> 
    
  

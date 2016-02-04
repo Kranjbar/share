@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :user_skills, dependent: :destroy
   has_many :skills, through: :user_skills, dependent: :destroy
+  has_many :reviews, dependent: :destroy
 
   def self.confirm(params)
       @user = User.find_by({email: params[:email]})
