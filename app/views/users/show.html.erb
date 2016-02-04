@@ -10,7 +10,7 @@
       <% if current_user && current_user != @user %>
         <h4><%= mail_to @user.email, "Email me", subject: "Someone from Sharetastic wants to connect with you!" %></h4>
       <% end %>
-      <h4><span class="context-text"></span>My Current City is <span class="accent-text"><%= @user.current_city %></span></h4>
+      <h4><span class="context-text">My Current City is </span><span class="accent-text"><%= @user.current_city %></span></h4>
       <h4><span class="context-text">Some Things About Me</span></h4>
       <div class= 'accent-text' id="bio"><%= @user.bio %></div>
       <br>
