@@ -31,7 +31,7 @@ Category.destroy_all
   k.save!
 
   h = User.new ({email: 'h.n.stenson@gmail.com', first_name: 'Heather', last_name: 'Stenson', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.'})
-  h.avatar = File.open("public/images/heather_w_chicken.JPG")
+  h.avatar = File.open("public/images/heather_w_chicken.jpg")
   h.save!
 
   category = Category.create([{name: 'Tutoring'}, {name: 'Outdoors'}, {name: 'Health and Beauty'}, {name: 'Pets'}, 
