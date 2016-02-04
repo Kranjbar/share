@@ -1,5 +1,6 @@
 # Sharetastic
-A users can list skills on their profile that others can see in an organized fashion on our site. A second user can then sign in and email a selected user based on the desired skill to arrange a skill trade.
+Sharetastic is designed to get new and old neighbors communicating in a friendly way. The idea of a neighborhood will change but the thought of neighbors helping one another should remain the same. Our platform allows neighbors to connect by sharing skills to accomplish task by trading skills rather than paying for services.
+
 
 ## Contents
 * **[Getting Started](#getting-started):** How can you work with our code?
