@@ -4,6 +4,7 @@ Sharetastic is designed to get new and old neighbors communicating in a friendly
 
 ## Contents
 * **[Getting Started](#getting-started):** How can you work with our code?
+* **[Screenshot](#screenshot):** What does our application look like?
 * **[Wireframes](#wireframes):** How did we envision the application's user interface?
 * **[User Stories](#user-stories):** How did we plan our features and organize them into sprints?
 * **[Heroku Link](#heroku-hosted-project)**
@@ -18,6 +19,9 @@ Sharetastic is designed to get new and old neighbors communicating in a friendly
 3. ImageMagick must be installed on your machine (Mac OS X - `brew install imagemagick`, Ubuntu - `sudo apt-get install imagemagick -y`).
 4. Run `rake db:setup` to create and migrate the database (PostgreSQL must be installed on your machine).
 5. Run `rails s` to start the server locally.
+
+# Screenshot
+<img src="ScreenShot.png">
 
 # Wireframes
 <img src="Wireframes.jpg">
