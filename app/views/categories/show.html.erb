@@ -1,19 +1,9 @@
-<br>
-<div class="container">
-  <h2 class="title text-center"><%= @category.name %></h2>
+<div style="padding: 5%" >
+  <h2><%= @category.name %></h2>
   <% @category.skills.each do |skill| %>
-  	<div class="col-sm-4 text-center skill-box">
-	  	<h3><%= skill.name %></h3>
-	    <% skill.users.each do |user| %>
-	      <h4><strong> <%=link_to "#{user.first_name} #{user.last_name}", user_path(user.slug) %> </strong><br>  </h4>
-	    <% end %>
-	</div>
+  	<h3><%= skill.name %><h3>
+    <% skill.users.each do |user| %>
+      <h4><strong> <%=link_to "#{user.first_name} #{user.last_name}", user_path(user.slug) %> </strong><br>  </h4>
+    <% end %>
   <% end %>
-</div>
-
-<br>
-<br>
-
-<div class="container">
-	<%= button_to "Go Back to Categories", categories_path, method: :get, class: 'btn btn-accent' %>
 </div>

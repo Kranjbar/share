@@ -4,7 +4,7 @@
   <!-- Dropdown menu-->
   <div class="container">
     <% @categories.each do |category| %>
-      <div class="dropdown col-sm-4 text-center">
+      <div class="dropdown col-sm-4 text-center" style="padding: 20px">
         <button class="btn btn-accent dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         <%= category.name %>
         <span class="caret"></span>
@@ -16,7 +16,7 @@
           <% end %>
         </ul>
       </div>
-      <br>
+     
     <% end %>
   </div>
 </div>
