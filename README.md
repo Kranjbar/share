@@ -1,13 +1,14 @@
-# Sharetastic  (trading skills rather than currency)
-A users can list skills on their profile that others can see in an organized fashion on our site. A second user can then sign in and email a selected user based on the desired skill to arrange a skill trade.
+# Sharetastic
+Sharetastic is designed to get new and old neighbors communicating in a friendly way. The idea of a neighborhood will change but the thought of neighbors helping one another should remain the same. Our platform allows neighbors to connect by sharing skills to accomplish task by trading skills rather than paying for services.
+
 
 ## Contents
-* **[Getting Started](#getting--started):** How can you work with our code?
+* **[Getting Started](#getting-started):** How can you work with our code?
 * **[Wireframes](#wireframes):** How did we envision the application's user interface?
-* **[User Stories](#user--stories):** How did we plan our features and organize them into sprints?
-* **[Heroku Link](#heroku--hosted--project)**
+* **[User Stories](#user-stories):** How did we plan our features and organize them into sprints?
+* **[Heroku Link](#heroku-hosted-project)**
 * **[Technologies](#technologies):** What languages, gems, libraries, and frameworks are being used?
-* **[Future Development](#future--development):** What are we hoping to add?
+* **[Future Development](#future-development):** What are we hoping to add?
 * **[Contributors](#contributors):** Who made all of this happen?
 
 # Getting Started
@@ -19,7 +20,7 @@ A users can list skills on their profile that others can see in an organized fas
 5. Run `rails s` to start the server locally.
 
 # Wireframes
-# <img src="Wireframe.jpg">
+<img src="Wireframes.jpg">
 
 # User Stories
 
