@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20160203191423) do
 
-  # Since you didn't use the rating system in this version, you can go ahead and remove the tables that refer to that. (Check out how to run a migration that will drop a table!) - HS 
+  # TODO: Since you didn't use the rating system in this version, you can go ahead and remove the tables that refer to that. (Check out how to run a migration that will drop a table!) - HS 
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"

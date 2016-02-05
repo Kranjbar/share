@@ -12,4 +12,4 @@
 !/log/.keep
 /tmp
 
-# Add the public/assets folder to the .gitignore file
+# TODO: Add the public/assets folder to the .gitignore file

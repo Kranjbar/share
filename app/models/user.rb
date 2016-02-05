@@ -12,8 +12,7 @@ class User < ActiveRecord::Base
       @user.try(:authenticate, params[:password])
   end
 
-  # Should be self.is_authorized?
-  # Also, what does it know what @user is in this case?
+  # TODO: Should be self.is_authorized?
   # If you end up not using a method, you should
   # remove it from your deployed code. 
   def is_authorized?

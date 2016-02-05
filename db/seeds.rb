@@ -11,8 +11,8 @@ User.destroy_all
 Skill.destroy_all
 Category.destroy_all
 
-  # This isn't a huge issue, but keep in mind that this information is now out in the world! Think about using 
-  # Ffaker data instead for info that will be deployed to GitHub. 
+  # TODO: This isn't a huge issue, but keep in mind that this information is now public-ish! 
+  # Think about using Ffaker data instead for info that will be deployed to GitHub. 
   k = User.new ({email: 'kehontas@gmail.com', first_name: 'Kehontas', last_name: 'Rowe', current_city: 'Oakland', password: 'password', bio: 'Lorem ipsum dolor sit amet fusce. Luctus in a. Natoque a cras leo mauris fusce. Praesent doloribus vel. Leo suspendisse sed porttitor urna taciti sociis.' })  
   k.avatar = File.open("public/images/Kehontas.png")
   k.save!

@@ -4,13 +4,13 @@
   <!-- Dropdown menu-->
   <div class="container">
     <% @categories.each do |category| %>
-      <!-- Don't put inline style in production! -->
+      <!-- TODO: Don't put inline style in production! -->
       <div class="dropdown col-sm-4 text-center" style="padding: 20px">
         <button class="btn btn-accent dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         <%= category.name %>
         <span class="caret"></span>
         </button>
-        <!-- Check out what's going on with the styling/positioning for the dropdown menus here -->
+        <!-- TODO: Check out what's going on with the styling/positioning for the dropdown menus here -->
         <ul class="dropdown-menu">
           <% category.skills.each do |skill| %>
             <%= link_to "#{skill.name}", add_skills_path(skill), method: :post, class: 'accent-text' %><br>
