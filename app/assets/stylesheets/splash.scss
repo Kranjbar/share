@@ -4,6 +4,9 @@
 
 
 h1 {
+  // Consider modularity when you're writing CSS. Is this a style you might need to use again on a different page?
+  // You could make this a class instead so that it's reusable. Also applies to some of your other CSS. 
+  // Think DRY! How can you use inheritance to your advantage?
   font-family: 'Lobster', cursive;
   font-size: 160px;
   margin-top: 18%;
@@ -12,6 +15,8 @@ h1 {
 }
 
 .splash {
+  // It's typically best practice to not connect to URLs for images unless you know for sure that the link is stable. 
+  // What if this website went down, or got hacked so all pictures were replaced with naughty ones?
 	background-image: url(http://bestwallpaperhd.com/wp-content/uploads/2012/12/download-sunrise-wallpaper.jpg);
 	height: auto;
 	background-size: cover;
@@ -23,6 +28,9 @@ h1 {
 	top: 0;
 }
 
+// This varies from dev to dev, but many folks are very opinionated about not using IDs unless it's 100%
+// guaranteed to be a unique element forever until the end of time. Consider using classes instead so that you
+// can reuse the code if necessary. 
 #descrip {
 	font-family: 'Lobster', cursive;
 	font-size: 50px;
