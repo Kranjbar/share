@@ -11,3 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Add the public/assets folder to the .gitignore file
